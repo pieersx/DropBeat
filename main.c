@@ -4,10 +4,6 @@
 
 #define COLOR_BACKGROUND GetColor(0x181818FF)
 
-typedef struct {
-    Music music;
-} Track;
-    
 int main(void)
 {
     size_t screen = 80;
@@ -18,8 +14,8 @@ int main(void)
     Music music = LoadMusicStream("");
     PlayMusicStream(music);
 
-    int w = GetScreenWidth();
-    int h = GetScreenHeight();
+    // int w = GetScreenWidth();
+    // int h = GetScreenHeight();
 
     while (!WindowShouldClose()) {
         UpdateMusicStream(music);
