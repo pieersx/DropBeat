@@ -23,7 +23,7 @@ int main(void)
         {     
             ClearBackground(COLOR_BACKGROUND);
 
-            DrawText("Drop music here", screen*5.5/2, screen*7.5/2, 100, WHITE);
+            DrawText("", screen*5.5/2, screen*7.5/2, 100, WHITE);
 
             if (IsFileDropped()) {
                 FilePathList droppedFiles = LoadDroppedFiles();
@@ -34,7 +34,7 @@ int main(void)
 
                 UnloadDroppedFiles(droppedFiles);
                 PlayMusicStream(music);
-				SetMusicVolume(music, 1.0f);
+                SetMusicVolume(music, 1.0f);
             }
 
             if (IsKeyPressed(KEY_SPACE)) {
